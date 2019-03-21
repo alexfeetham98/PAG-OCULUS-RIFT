@@ -161,4 +161,16 @@ public class OVRGrabbable : MonoBehaviour
             m_grabbedBy.ForceRelease(this);
         }
     }
+
+    private void Update()
+    {
+        if (isGrabbed == true)
+        {
+            gameObject.layer = 0;
+        }
+        if (isGrabbed == false && !m_grabbedKinematic)
+        {
+            gameObject.layer = 9;
+        }
+    }
 }
