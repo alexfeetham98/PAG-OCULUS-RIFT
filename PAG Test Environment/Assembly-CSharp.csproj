@@ -348,6 +348,8 @@
     <Compile Include="Assets\Scripts\DisplayScript.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\Door2.cs" />
+    <Compile Include="Assets\Scripts\Gear.cs" />
+    <Compile Include="Assets\Scripts\gearStay.cs" />
     <Compile Include="Assets\Scripts\HapticBuzz.cs" />
     <Compile Include="Assets\Scripts\Key.cs" />
     <Compile Include="Assets\Scripts\keyStay.cs" />

@@ -14,23 +14,9 @@ public class Door2 : MonoBehaviour {
     bool yellow = false;
     bool pink = false;
 
-	// Use this for initialization
-	void Start ()
-    {
-
-	}
-
     // Update is called once per frame
     void Update ()
     {
-        //for (int i = 0; i < Slots.Length; i++)
-        //{
-        //    if (Keys[i].transform.position == Slots[i].transform.position)
-        //    {
-
-        //    }
-        //}
-
         if (Keys[0].transform.position == Slots[0].transform.position)
         {
             red = true;
