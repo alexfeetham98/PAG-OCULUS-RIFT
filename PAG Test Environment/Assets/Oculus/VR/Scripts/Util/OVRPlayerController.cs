@@ -150,6 +150,8 @@ public class OVRPlayerController : MonoBehaviour
 	private float buttonRotation = 0f;
 	private bool ReadyToSnapTurn; // Set to true when a snap turn has occurred, code requires one frame of centered thumbstick to enable another snap turn.
 
+    public bool thumbstickMovement;
+
 	void Start()
 	{
 		// Add eye-depth as a camera offset from the player controller
@@ -375,21 +377,24 @@ public class OVRPlayerController : MonoBehaviour
 				primaryAxis.x = Mathf.Round(primaryAxis.x * FixedSpeedSteps) / FixedSpeedSteps;
 			}
 
-			//if (primaryAxis.y > 0.0f)
-			//	MoveThrottle += ort * (primaryAxis.y * transform.lossyScale.z * moveInfluence * Vector3.forward);
+            if (thumbstickMovement)
+            {
+                if (primaryAxis.y > 0.0f)
+                    MoveThrottle += ort * (primaryAxis.y * transform.lossyScale.z * moveInfluence * Vector3.forward);
 
-			//if (primaryAxis.y < 0.0f)
-			//	MoveThrottle += ort * (Mathf.Abs(primaryAxis.y) * transform.lossyScale.z * moveInfluence *
-			//						   BackAndSideDampen * Vector3.back);
+                if (primaryAxis.y < 0.0f)
+                    MoveThrottle += ort * (Mathf.Abs(primaryAxis.y) * transform.lossyScale.z * moveInfluence *
+                                           BackAndSideDampen * Vector3.back);
 
-			//if (primaryAxis.x < 0.0f)
-			//	MoveThrottle += ort * (Mathf.Abs(primaryAxis.x) * transform.lossyScale.x * moveInfluence *
-			//						   BackAndSideDampen * Vector3.left);
+                if (primaryAxis.x < 0.0f)
+                    MoveThrottle += ort * (Mathf.Abs(primaryAxis.x) * transform.lossyScale.x * moveInfluence *
+                                           BackAndSideDampen * Vector3.left);
 
-			//if (primaryAxis.x > 0.0f)
-			//	MoveThrottle += ort * (primaryAxis.x * transform.lossyScale.x * moveInfluence * BackAndSideDampen *
-			//						   Vector3.right);
-		}
+                if (primaryAxis.x > 0.0f)
+                    MoveThrottle += ort * (primaryAxis.x * transform.lossyScale.x * moveInfluence * BackAndSideDampen *
+                                           Vector3.right);
+            }            
+        }
 
 		if (EnableRotation)
 		{

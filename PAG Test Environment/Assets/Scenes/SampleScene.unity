@@ -429,7 +429,8 @@ GameObject:
   - component: {fileID: 241120978}
   - component: {fileID: 241120982}
   - component: {fileID: 241120977}
-  m_Layer: 0
+  - component: {fileID: 241120983}
+  m_Layer: 9
   m_Name: Green Gear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,6 +552,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockSlot: {fileID: 788523917}
+--- !u!65 &241120983
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 241120975}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.04, z: 0.01}
+  m_Center: {x: 0, y: -9.313228e-10, z: 0.000000007450581}
 --- !u!1 &295151530
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +580,8 @@ GameObject:
   - component: {fileID: 295151532}
   - component: {fileID: 295151538}
   - component: {fileID: 295151531}
-  m_Layer: 0
+  - component: {fileID: 295151539}
+  m_Layer: 9
   m_Name: Pink Gear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,6 +715,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockSlot: {fileID: 1117575639}
+--- !u!65 &295151539
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295151530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.04, z: 0.01}
+  m_Center: {x: 0, y: -9.313228e-10, z: -0.000000007450581}
 --- !u!1 &299216806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,6 +1296,21 @@ MonoBehaviour:
   MaxFade: 1
   FadeMinDistance: 0.25
   FadeMaxDistance: 0.35
+--- !u!54 &409106251
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 409106244}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &416383819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,7 +1916,8 @@ GameObject:
   - component: {fileID: 584673884}
   - component: {fileID: 584673888}
   - component: {fileID: 584673883}
-  m_Layer: 0
+  - component: {fileID: 584673889}
+  m_Layer: 9
   m_Name: Yellow Gear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1997,6 +2039,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockSlot: {fileID: 380157456}
+--- !u!65 &584673889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584673881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.04, z: 0.01}
+  m_Center: {x: 0, y: -9.313228e-10, z: -0.000000007450581}
 --- !u!1 &591878245 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1696465254675144, guid: bbd8ff8aaf3bc6e46a355534c8982de2,
@@ -2818,7 +2872,8 @@ GameObject:
   - component: {fileID: 750146485}
   - component: {fileID: 750146489}
   - component: {fileID: 750146484}
-  m_Layer: 0
+  - component: {fileID: 750146490}
+  m_Layer: 9
   m_Name: Red Gear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2940,6 +2995,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockSlot: {fileID: 951731085}
+--- !u!65 &750146490
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 750146482}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.04, z: 0.01}
+  m_Center: {x: 0, y: -9.313228e-10, z: 0.000000007450581}
 --- !u!1 &760795105
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,7 +3663,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 920662846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.81, y: 1.006, z: -15.79}
+  m_LocalPosition: {x: 3.81, y: 1.006, z: -13.513}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 574218485}
@@ -3655,7 +3722,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.25, y: 1.25, z: 1.25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &920662852
 MeshRenderer:
@@ -4851,7 +4918,8 @@ GameObject:
   - component: {fileID: 1325171380}
   - component: {fileID: 1325171384}
   - component: {fileID: 1325171379}
-  m_Layer: 0
+  - component: {fileID: 1325171385}
+  m_Layer: 9
   m_Name: Blue Gear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4973,6 +5041,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockSlot: {fileID: 1540628748}
+--- !u!65 &1325171385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1325171377}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.04, z: 0.01}
+  m_Center: {x: 0, y: -9.313228e-10, z: 0}
 --- !u!1 &1334149486
 GameObject:
   m_ObjectHideFlags: 0
@@ -5931,7 +6011,8 @@ GameObject:
   - component: {fileID: 1553871612}
   - component: {fileID: 1553871617}
   - component: {fileID: 1553871611}
-  m_Layer: 0
+  - component: {fileID: 1553871618}
+  m_Layer: 9
   m_Name: Orange Gear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6053,6 +6134,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockSlot: {fileID: 1080399254}
+--- !u!65 &1553871618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1553871610}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.04, z: 0.01}
+  m_Center: {x: 0, y: -9.313228e-10, z: 0}
 --- !u!1001 &1566910739
 Prefab:
   m_ObjectHideFlags: 0
@@ -6070,7 +6163,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -16.69
+      value: 17.86
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6184,6 +6277,10 @@ Prefab:
     - target: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
+      propertyPath: thumbstickMovement
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
@@ -7477,7 +7574,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.25, y: 1.25, z: 1.25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2074209340
 MeshRenderer:
