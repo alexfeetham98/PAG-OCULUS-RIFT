@@ -2,32 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour {
-
+public class Door : MonoBehaviour
+{
     public GameObject[] Slots;
     public GameObject[] Keys;
 
-    bool red = false;
-    bool pink = false;
+    bool one = false;
+    bool two = false;
 	
-	// Update is called once per frame
 	void Update ()
     {
-        if (Keys[0].transform.position == Slots[0].transform.position)
+        if (Slots.Length == 1 && Keys.Length == 1)
         {
-            red = true;
-            Slots[0].layer = 0;
-            Keys[0].layer = 0;
+            if (Keys[0].transform.position == Slots[0].transform.position)
+            {
+                one = true;
+                Slots[0].layer = 0;
+                Keys[0].layer = 0;
+            }
+            if (one)
+            {
+                Destroy(gameObject);
+            }
         }
-        if (Keys[1].transform.position == Slots[1].transform.position)
+             
+
+
+        if (Slots.Length == 2 && Keys.Length == 2)
         {
-            pink = true;
-            Slots[1].layer = 0;
-            Keys[1].layer = 0;
-        }
-        if (red && pink)
-        {
-            Destroy(this.gameObject);
+            if (Keys[0].transform.position == Slots[0].transform.position)
+            {
+                one = true;
+                Slots[0].layer = 0;
+                Keys[0].layer = 0;
+            }
+            if (Keys[1].transform.position == Slots[1].transform.position)
+            {
+                two = true;
+                Slots[1].layer = 0;
+                Keys[1].layer = 0;
+            }
+            if (one && two)
+            {
+                Destroy(this.gameObject);
+            }
         }
 	}
 }

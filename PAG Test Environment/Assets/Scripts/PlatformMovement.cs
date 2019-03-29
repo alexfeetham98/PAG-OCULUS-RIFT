@@ -59,7 +59,6 @@ public class PlatformMovement : MonoBehaviour
     {
         if (riding)
         {
-            gameObject.layer = 0;
             if (pointInPath == null || pointInPath.Current == null)
             {
                 return;

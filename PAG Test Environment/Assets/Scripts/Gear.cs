@@ -7,7 +7,7 @@ public class Gear : MonoBehaviour
     public GameObject gear;
     Rigidbody gearRb;
     public bool unlocked;
-    public Renderer rend;
+    Renderer rend;
 
     private void OnTriggerEnter(Collider other)
     {
