@@ -8,21 +8,25 @@ public class Gear : MonoBehaviour
     Rigidbody gearRb;
     public bool unlocked;
     Renderer rend;
+    public GameObject button;
+    ButtonPress buttonScript;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject == gear)
-        {
-            unlocked = true;
-            gearRb.isKinematic = true;
-            rend.enabled = false;
-        }
-    }
-
-    void Start ()
+    void Start()
     {
         gearRb = gear.GetComponent<Rigidbody>();
         rend = GetComponent<Renderer>();
         rend.enabled = true;
-	}
+        buttonScript = button.GetComponent<ButtonPress>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == gear)
+        {
+            unlocked = true;
+            gearRb.isKinematic = true;
+            rend.enabled = false;
+            buttonScript.active = true;
+        }
+    }
 }

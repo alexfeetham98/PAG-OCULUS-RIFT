@@ -346,7 +346,7 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceMod.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
     <Compile Include="Assets\Scripts\ButtonPress.cs" />
-    <Compile Include="Assets\Scripts\DestroyHolder.cs" />
+    <Compile Include="Assets\Scripts\DestroyGlass.cs" />
     <Compile Include="Assets\Scripts\DisplayScript.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\Door2.cs" />

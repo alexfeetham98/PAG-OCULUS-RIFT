@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class gearStay : MonoBehaviour {
 
-    public GameObject lockSlot;
+    public GameObject gearSlot;
     Rigidbody rb;
     Gear keyScript;
     float timer = 0f;
@@ -13,7 +13,7 @@ public class gearStay : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        keyScript = lockSlot.GetComponent<Gear>();
+        keyScript = gearSlot.GetComponent<Gear>();
         rb = GetComponent<Rigidbody>();
         script = GetComponent<OVRGrabbable>();
     }
@@ -25,11 +25,11 @@ public class gearStay : MonoBehaviour {
         {
             if (timer < 0.25f)
             {
-                transform.rotation = lockSlot.transform.rotation;
+                transform.rotation = gearSlot.transform.rotation;
             }
             else
             {
-                transform.position = lockSlot.transform.position;
+                transform.position = gearSlot.transform.position;
                 transform.Rotate(0, 0, 20 * Time.deltaTime);
                 script.enabled = false;
                 gameObject.layer = 0;
