@@ -151,6 +151,10 @@ public class OVRPlayerController : MonoBehaviour
 	private bool ReadyToSnapTurn; // Set to true when a snap turn has occurred, code requires one frame of centered thumbstick to enable another snap turn.
 
     public bool thumbstickMovement;
+    public bool Easy = false;
+    public bool Hard = false;
+    public GameObject SpawnPointEasy;
+    public GameObject SpawnPointHard;
 
 	void Start()
 	{
@@ -158,6 +162,16 @@ public class OVRPlayerController : MonoBehaviour
 		var p = CameraRig.transform.localPosition;
 		p.z = OVRManager.profile.eyeDepth;
 		CameraRig.transform.localPosition = p;
+        if (Easy)
+        {
+            transform.position = SpawnPointEasy.transform.position;
+            transform.rotation = SpawnPointEasy.transform.rotation;
+        }
+        if (Hard)
+        {
+            transform.position = SpawnPointHard.transform.position;
+            transform.rotation = SpawnPointHard.transform.rotation;
+        }
 	}
 
 	void Awake()

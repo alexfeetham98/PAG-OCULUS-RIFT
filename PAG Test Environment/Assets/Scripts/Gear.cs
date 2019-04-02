@@ -27,6 +27,7 @@ public class Gear : MonoBehaviour
             gearRb.isKinematic = true;
             rend.enabled = false;
             buttonScript.active = true;
+            buttonScript.GetComponent<Renderer>().enabled = true;
         }
     }
 }

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door2 : MonoBehaviour {
-
+public class Door2 : MonoBehaviour
+{
     public GameObject[] Slots;
     public GameObject[] Keys;
 
+    public bool GearDoor;
     bool red = false;
     bool green = false;
     bool blue = false;
@@ -14,8 +15,29 @@ public class Door2 : MonoBehaviour {
     bool yellow = false;
     bool pink = false;
 
+    GearStay GSSR;
+    GearStay GSSG;
+    GearStay GSSB;
+    GearStay GSSO;
+    GearStay GSSY;
+    GearStay GSSP;
+
+    private float timer = 0f;
+
+    void Start()
+    {
+
+        GSSR = Keys[0].GetComponent<GearStay>();
+        GSSG = Keys[1].GetComponent<GearStay>();
+        GSSB = Keys[2].GetComponent<GearStay>();
+        GSSO = Keys[3].GetComponent<GearStay>();
+        GSSY = Keys[4].GetComponent<GearStay>();
+        GSSP = Keys[5].GetComponent<GearStay>();
+
+    }
+
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         if (Keys[0].transform.position == Slots[0].transform.position)
         {
@@ -55,9 +77,28 @@ public class Door2 : MonoBehaviour {
         }
 
 
+
+
         if (red && green && blue && orange && yellow && pink)
         {
-            Destroy(this.gameObject);
+            if (GearDoor)
+            {
+                timer += Time.deltaTime;
+                if (timer > 0.5f)
+                {
+                    GSSR.rotate = true;
+                    GSSG.rotate = true;
+                    GSSB.rotate = true;
+                    GSSO.rotate = true;
+                    GSSY.rotate = true;
+                    GSSP.rotate = true;
+                    Destroy(this.gameObject);
+                }
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
         }
-	}
+    }
 }

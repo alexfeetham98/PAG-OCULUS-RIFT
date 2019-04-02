@@ -351,13 +351,14 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\Door2.cs" />
     <Compile Include="Assets\Scripts\Gear.cs" />
-    <Compile Include="Assets\Scripts\gearStay.cs" />
+    <Compile Include="Assets\Scripts\GearStay.cs" />
     <Compile Include="Assets\Scripts\HandColliderUpdate.cs" />
     <Compile Include="Assets\Scripts\Key.cs" />
     <Compile Include="Assets\Scripts\keyStay.cs" />
     <Compile Include="Assets\Scripts\MovementPath.cs" />
     <Compile Include="Assets\Scripts\PlatformMovement.cs" />
     <Compile Include="Assets\Scripts\PlatformSlot.cs" />
+    <Compile Include="Assets\Scripts\TeleportPlayer.cs" />
     <Compile Include="Assets\Scripts\UpdatePos.cs" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarMaterialStateShader.cginc" />
     <None Include="Assets\Oculus\Avatar\Samples\CrossPlatform\Readme.txt" />

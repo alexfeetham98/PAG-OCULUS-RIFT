@@ -8,7 +8,9 @@ public class ButtonPress : MonoBehaviour
     public GameObject platform;
     public GameObject LeftHand;
     public GameObject RightHand;
+    public GameObject gear;
     PlatformMovement PMS;
+    GearStay GSS;
     Renderer rend;
 
     public bool active = false;
@@ -16,6 +18,7 @@ public class ButtonPress : MonoBehaviour
 	void Start ()
     {
         PMS = platform.GetComponent<PlatformMovement>();
+        GSS = gear.GetComponent<GearStay>();
         rend = GetComponent<Renderer>();
         rend.enabled = false;
     }
@@ -28,7 +31,7 @@ public class ButtonPress : MonoBehaviour
             if (other.gameObject == LeftHand || other.gameObject == RightHand)
             {
                 PMS.riding = true;
-                Debug.Log(PMS.riding);
+                GSS.rotate = true;
                 Destroy(gameObject);
             }
         }        
